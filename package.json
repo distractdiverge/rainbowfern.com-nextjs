@@ -2,6 +2,8 @@
   "name": "example-nextjs-netlify",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "author": "Astrid Lapinski",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
