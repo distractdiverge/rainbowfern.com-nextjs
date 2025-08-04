@@ -7,7 +7,7 @@ const FooterComponent : React.FC = () => {
             <div className="p-4">
                 <div className="w-auto">
                     <div className="border-gray-200 border-t p-4 flex justify-between items-center">
-                        <p className="text-sm text-gray-500">&copy; {currentYear} Alex Lapinski</p>
+                        <p className="text-sm text-gray-500">&copy; {currentYear} Astrid 'Alex' Lapinski</p>
                         <a href="https://www.linkedin.com/in/alexlapinski/" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-blue-600">
                             LinkedIn
                         </a>
