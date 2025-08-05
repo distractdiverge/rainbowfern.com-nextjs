@@ -1,6 +1,5 @@
 import React from 'react';
 import userImage from '../../../public/AllieLooktoFront.webp';
-import Image from 'next/image';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -44,7 +43,7 @@ function Contact() {
 
         {/* Image */}
         <div className="flex justify-center md:justify-end">
-          <Image 
+          <img 
             src={placeholderImageUrl.src} 
             alt="Portrait of the site author" 
             className="rounded-lg shadow-xl w-full max-w-md md:max-w-sm lg:max-w-md object-cover aspect-[4/5]" 

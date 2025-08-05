@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -71,7 +70,7 @@ const DevIcon = ({
   const iconUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${iconName}/${iconName}-${iconVersion}.svg`;
   
   return iconName ? (
-    <Image 
+    <img 
       src={iconUrl} 
       alt={name} 
       className={`w-5 h-5 ${className}`}

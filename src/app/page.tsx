@@ -1,6 +1,5 @@
 import AboutHeroImage from '../../public/AllieLooktoSide.webp';
 import ServicesHero from '@/components/ServicesHero';
-import Image from 'next/image';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -14,7 +13,7 @@ function App() {
       <div className="">
         <h1 className="text-3xl font-semibold pb-8">Rainbow Fern Consulting</h1>
         <div className="">
-          <Image className="float-left mr-5 mb-5 w-[37%] md:w-[40%] md:float-right md:ml-8 rounded-lg" 
+          <img className="float-left mr-5 mb-5 w-[37%] md:w-[40%] md:float-right md:ml-8 rounded-lg" 
           src={AboutHeroImage.src} alt="About Hero Image" />
           <p className="mb-5 text-sm">Hi! I&apos;m Astrid, I also go by Alex, and I&apos;m the founder of Rainbow Fern Consulting.</p>
           <p className="mb-5 text-sm">I have worked in the software field for the last 18 years working up the corp ladder from intern to architect.</p>

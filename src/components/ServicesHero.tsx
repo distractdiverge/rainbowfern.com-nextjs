@@ -1,5 +1,4 @@
 import HeroImage from "../../public/ShadowForest.webp";
-import Image from "next/image";
 
 const Services = () => {
   const servicesData = [
@@ -26,7 +25,7 @@ const Services = () => {
         <h2 className="text-1xl font-bold mb-6">What I Do</h2>
         
         <div className="max-w-[37%] float-right ml-5 mb-5 md:float-left md:mr-8 ">
-            <Image className="rounded-lg" src={HeroImage.src} alt="Shadow the dog" />
+            <img className="rounded-lg" src={HeroImage.src} alt="Shadow the dog" />
             <p className="text-gray-400 text-[0.67rem] pt-2">This is shadow, our resident dog and a very very good boy.</p>
         </div>
 

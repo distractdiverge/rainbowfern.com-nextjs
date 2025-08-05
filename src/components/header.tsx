@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import rainbowFernLogo from '../../public/fern-colors-web.svg';
 
 const HeaderComponent : React.FC = () => {
@@ -59,8 +58,9 @@ const HeaderComponent : React.FC = () => {
     return (
         <header className="bg-white flex justify-between p-1 md:p-4">
             <Link href="/" className="flex">
-                <Image src={rainbowFernLogo.src} alt="Rainbowfern logo" 
-                    className="block mt-2 ml-1 mr-2 md:mt-0 md:ml-0 max-w-[20px] max-h-[20px] md:max-w-[32px] md:max-h-[32px]"/> 
+                <img src={rainbowFernLogo.src} alt="Rainbowfern logo" 
+                    className="block mt-2 ml-1 mr-2 md:mt-0 md:ml-0 max-w-[20px] max-h-[20px] md:max-w-[32px] md:max-h-[32px]"
+                    /> 
                 <h1 className="block mt-2 mr-2 text-s md:text-base">
                     Rainbowfern.com
                 </h1>
