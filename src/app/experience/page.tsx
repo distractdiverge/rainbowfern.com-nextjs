@@ -98,12 +98,15 @@ const experiences: ExperienceItem[] = [
   // Add more experiences here following the same structure
 ];
 
-function Experience() {
-  //useSeo({ 
-  //  title: 'Experience | Alex Lapinski',
-  //  description: 'Review the extensive professional experience of Alex Lapinski, from Principal Technical Staff at PayPal to Independent Contractor, showcasing a career in software engineering and architecture.' 
-  //});
+import type { Metadata } from 'next';
 
+export const metadata: Metadata = { 
+  title: 'Experience | Alex &apos;Astrid&apos; Lapinski',
+  description: 'Review the extensive professional experience of Alex &apos;Astrid&apos; Lapinski, from Principal Technical Staff at PayPal to Independent Contractor, showcasing a career in software engineering and architecture.' 
+};
+
+function Experience() {
+  
   return (
     <div className="py-10 px-5 max-w-4xl mx-auto text-gray-800">
       <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center md:text-left">Experience</h1>

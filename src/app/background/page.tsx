@@ -1,5 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Background, Education and Skills | Alex &apos;Astrid&apos; Lapinski',
+  description: 'Discover the educational background and extensive skill set of Alex &apos;Astrid&apos; Lapinski, including proficiency in C#, Python, React, and various development tools and techniques.' 
+};
+
 
 const educationData = [
   {
@@ -186,11 +193,6 @@ const SkillTag: React.FC<{ name: string; years: string }> = ({ name, years }) =>
 };
 
 function EducationAndSkills() {
-  //useSeo({ 
-  //  title: 'Education & Skills | Alex Lapinski',
-  //  description: 'Discover the educational background and extensive skill set of Alex Lapinski, including proficiency in C#, Python, React, and various development tools and techniques.' 
-  //});
-
   const heroBackgroundImage = 'https://images.unsplash.com/photo-1550399105-c4db5fb85c18?ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80'; // Placeholder image
 
   return (

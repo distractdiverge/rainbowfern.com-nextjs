@@ -1,13 +1,14 @@
 import React from 'react';
 import userImage from '../../../public/AllieLooktoFront.webp';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact | Alex &apos;Astrid&apos; Lapinski',
+  description: 'Get in touch with Alex &apos;Astrid&apos; Lapinski to discuss potential projects, collaborations, or mentorship opportunities. Let\'s build something impactful together.' 
+};
 
 function Contact() {
-  //useSeo({ 
-  //  title: 'Contact | Alex Lapinski',
-  //  description: 'Get in touch with Alex Lapinski to discuss potential projects, collaborations, or mentorship opportunities. Let\'s build something impactful together.' 
-  //});
-
   const firstName = '';
   const lastName = '';
   const email = '';

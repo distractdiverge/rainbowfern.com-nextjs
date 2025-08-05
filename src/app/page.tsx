@@ -1,13 +1,14 @@
 import AboutHeroImage from '../../public/AllieLooktoSide.webp';
 import ServicesHero from '@/components/ServicesHero';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Alex &apos;Astrid&apos;Lapinski | Software & Automation Consultant',
+  description: 'Welcome to the portfolio of Alex Lapinski. Specializing in software development, test automation, and project mentorship with over 18 years of experience.',
+};
 
 function App() {
-  //useSeo({ 
-  //  title: 'Alex Lapinski | Software & Automation Consultant',
-  //  description: 'Welcome to the portfolio of Alex Lapinski. Specializing in software development, test automation, and project mentorship with over 18 years of experience.' 
-  //});
-
   return (
     <div className="bg-white pl-8 pr-5 md:pl-12 pt-8">
       <div className="">
