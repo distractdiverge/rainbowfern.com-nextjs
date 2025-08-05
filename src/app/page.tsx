@@ -3,7 +3,7 @@ import ServicesHero from '@/components/ServicesHero';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Alex &apos;Astrid&apos;Lapinski | Software & Automation Consultant',
+  title: 'Alex \'Astrid\' Lapinski | Software & Automation Consultant',
   description: 'Welcome to the portfolio of Alex Lapinski. Specializing in software development, test automation, and project mentorship with over 18 years of experience.',
 };
 
