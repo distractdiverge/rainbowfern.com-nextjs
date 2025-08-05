@@ -1,5 +1,5 @@
 import React from 'react';
-// Removed: import "./project-card.css";
+import Image from 'next/image';
 
 type ProjectCardProps = {
     name: string;
@@ -35,7 +35,7 @@ const ProjectCardComponent: React.FC<ProjectCardProps> = ({
     return (
         <div className={cardBaseClasses}>
             <div className={`${imageContainerBaseClasses} ${imageContainerPositionClasses}`}>
-                <img src={imageUrl} alt={`${name} project`} className="w-full h-auto block rounded" />
+                <Image src={imageUrl} alt={`${name} project`} className="w-full h-auto block rounded" />
             </div>
             <div className={`${detailsContainerBaseClasses} ${detailsContainerPositionClasses}`}>
                 <h2 className="text-2xl font-semibold text-gray-800 mb-2">{name}</h2>

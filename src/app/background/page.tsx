@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const educationData = [
   {
@@ -63,7 +64,7 @@ const DevIcon = ({
   const iconUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${iconName}/${iconName}-${iconVersion}.svg`;
   
   return iconName ? (
-    <img 
+    <Image 
       src={iconUrl} 
       alt={name} 
       className={`w-5 h-5 ${className}`}
