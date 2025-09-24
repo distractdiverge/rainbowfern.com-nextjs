@@ -1,0 +1,61 @@
+-# Findings
+-
+-- **Live SPA structure**
+-  The deployed React SPA (Vite build at `rainbowfern.com`) renders routes `/`, `/projects`, `/experience`, `/education`, `/contact` using React Router, a `Header` with functional mobile toggle, `Footer`, Google Analytics (GA4 `G-5H38H1LX1F`), and a `ServicesHero` section. Each page sets the document `<title>` and `<meta name="description">` via a helper `Cn()` and uses responsive layouts identical to those you have in the SPA source bundle.
+-
+-- **Current Next.js routes**
+-  The Next.js app under `src/app/` includes `/`, `/projects`, `/experience`, `/background`, `/contact`, and `/background` doubles as the SPA’s “Education & Skills” content. Metadata is declared via the `metadata` export on each route. All components are still client-side rendered (no server data fetching). Static assets (`/public/...webp`, `fern-colors.svg`) match the SPA bundle.
+-
+-# Outstanding Migration Gaps
+-
+-- **Navigation parity**
+-  - SPA nav links target `/education`; Next nav still points to `/background` (`src/components/header.tsx`).
+-  - Mobile menu in Next is hard-coded closed (`false` flags) and lacks the toggle state/handlers that exist in SPA.
+-  - SPA header shrinks to icons from bundled asset names; verify the same assets exist in `public/`.
+-
+-- **Contact form functionality**
+-  - SPA `contact` page uses React state and a `mailto:` submit handler (`window.location.href`) with hard-coded email pieces; Next page keeps empty constants and comments out the handler (`src/app/contact/page.tsx`). Users can’t interact with the form in the Next version.
+-
+-- **Education/Background page**
+-  - SPA route is `/education` with content identical to Next’s `/background/page.tsx`. Need to rename route directory (or add redirect) to preserve incoming traffic and update header + footer links.
+-
+-- **Meta/title management**
+-  - SPA dynamically updates `document.title` and description on route change via client helper. Next pages rely on `metadata` exports, which is correct for SSR, but confirm you’ve migrated all titles/descriptions (they currently differ slightly—e.g., home page title adds “Rainbow Fern Consulting” text in SPA). Adjust as needed.
+-
+-- **Analytics**
+-  - GA4 initialization and `pageview` dispatch from SPA (`ReactGA` initialization block) haven’t been ported. Consider using Next.js Analytics integration or client component to replicate page view tracking.
+-
+-- **Form + state handling**
+-  - SPA uses controlled inputs with `useState`. Next page currently binds input `value` to empty strings without `onChange`, making them read-only. Re-implement state management or convert to uncontrolled inputs.
+-
+-- **Placeholder content**
+-  - `src/app/projects/page.tsx` still has placeholder hero background, project images, and `detailsUrl` comments to “PLEASE UPDATE”. SPA version uses similar placeholders; decide whether to finalize assets/links before going live.
+-
+-- **Styling differences**
+-  - Tailwind classes ported correctly, but ensure global styles replicate SPA (padding/margins). Compare for parity.
+-
+-# Recommended Actions
+-
+-- **Navigation fixes**
+-  - Update `header.tsx` links to match SPA routes (`/education`) and implement hamburger toggle state/animations.
+-
+-- **Route alignment**
+-  - Rename `/background` route to `/education` or add a catch-all redirect to preserve SEO/backlinks.
+-
+-- **Contact form migration**
+-  - Restore form state handling and `mailto` submit logic, or replace with a serverless form handler if desired.
+-
+-- **Analytics integration**
+-  - Add GA4 measurement (e.g., via `@vercel/analytics`, custom client component, or GA script in `layout.tsx`) matching SPA behavior.
+-
+-- **Metadata review**
+-  - Verify `metadata` exports mirror SPA titles/descriptions. Adjust wording for consistency (“Alex ‘Astrid’ Lapinski | …”).
+-
+-- **Mobile UX**
+-  - Re-implement mobile nav overlay to match SPA (toggle button animates bars, closes on navigation).
+-
+-- **Content polish**
+-  - Replace placeholder images/links in `Projects` and verify copy matches production site.
+-
+-- **Testing**
+-  - Manually QA pages, including responsive layout and external links, before decommissioning SPA.
