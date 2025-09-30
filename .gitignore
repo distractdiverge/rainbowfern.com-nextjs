@@ -1,9 +1,9 @@
 # Playwright
-/e2e-tests/test-results/
-/e2e-tests/playwright-report/
-/e2e-tests/blob-report/
-/e2e-tests/playwright/.cache/
-/e2e-tests/playwright/.auth/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
 
 # dependencies
 /node_modules

@@ -1,54 +1,65 @@
 import { expect, test } from '@playwright/test';
 
+const SCREENSHOT_PATH = './screenshots';
+
 test('homepage screenshot', async ({ page }) => {
-    await page.goto('https://www.rainbowfern.com');
-    await page.screenshot({ path: './screenshots/homepage.png' });
+    await page.goto('https://www.rainbowfern.com', { waitUntil: 'networkidle' });
+    expect(await page.screenshot({ path: `${SCREENSHOT_PATH}/homepage.png`, fullPage: true })).toMatchSnapshot();
 });
 
 test('projects screenshot direct', async ({ page }) => {
-    await page.goto('https://www.rainbowfern.com/projects');
-    await page.screenshot({ path: './screenshots/projects.png' });
+    await page.goto('https://www.rainbowfern.com/projects', { waitUntil: 'networkidle' });
+    
+    expect(await page.screenshot({ path: `${SCREENSHOT_PATH}/projects.png`, fullPage: true })).toMatchSnapshot();
 });
 
 test('projects screenshot navigated', async ({ page }) => {
-    await page.goto('https://www.rainbowfern.com');
+    await page.goto('https://www.rainbowfern.com', { waitUntil: 'networkidle' });
     await page.getByRole('link', { name: 'Projects', exact: true }).click();
-    await page.waitForURL(/\/projects/);
-    await page.screenshot({ path: './screenshots/projects.png' });
+    await page.waitForURL(/\/projects/, { waitUntil: 'networkidle' });
+
+    expect(await page.screenshot({ path: `${SCREENSHOT_PATH}/projects.png`, fullPage: true })).toMatchSnapshot();
 });
 
 test('experience screenshot', async ({ page }) => {
-    await page.goto('https://www.rainbowfern.com/experience');
-    await page.screenshot({ path: './screenshots/experience.png' });
+    await page.goto('https://www.rainbowfern.com/experience', { waitUntil: 'networkidle' });
+    
+    expect(await page.screenshot({ path: `${SCREENSHOT_PATH}/experience.png`, fullPage: true })).toMatchSnapshot();
 });
 
 test('experience screenshot navigated', async ({ page }) => {
-    await page.goto('https://www.rainbowfern.com');
+    await page.goto('https://www.rainbowfern.com', { waitUntil: 'networkidle' });
     await page.getByRole('link', { name: 'Experience'}).click();
-    await page.waitForURL(/\/experience/);
-    await page.screenshot({ path: './screenshots/experience.png' });
+    await page.waitForURL(/\/experience/, { waitUntil: 'networkidle' });
+
+    expect(await page.screenshot({ path: `${SCREENSHOT_PATH}/experience.png`, fullPage: true })).toMatchSnapshot();
 });
 
 test('education screenshot', async ({ page }) => {
-    await page.goto('https://www.rainbowfern.com/education');
-    await page.screenshot({ path: './screenshots/education.png' });
+    await page.goto('https://www.rainbowfern.com/education', { waitUntil: 'networkidle' });
+    
+    expect(await page.screenshot({ path: `${SCREENSHOT_PATH}/education.png`, fullPage: true })).toMatchSnapshot();
 });
 
 test('education screenshot navigated', async ({ page }) => {
-    await page.goto('https://www.rainbowfern.com');
+    await page.goto('https://www.rainbowfern.com', { waitUntil: 'networkidle' });
     await page.getByRole('link', { name: 'Education'}).click();
-    await page.waitForURL(/\/education/);
-    await page.screenshot({ path: './screenshots/education.png' });
+    await page.waitForURL(/\/education/, { waitUntil: 'networkidle' });
+
+    expect(await page.screenshot({ path: `${SCREENSHOT_PATH}/education.png`, fullPage: true })).toMatchSnapshot();
 });
 
 test('contact screenshot', async ({ page }) => {
-    await page.goto('https://www.rainbowfern.com/contact');
-    await page.screenshot({ path: './screenshots/contact.png' });
+    await page.goto('https://www.rainbowfern.com/contact', { waitUntil: 'networkidle' });
+    
+    expect(await page.screenshot({ path: `${SCREENSHOT_PATH}/contact.png`, fullPage: true })).toMatchSnapshot();
 });
 
 test('contact screenshot navigated', async ({ page }) => {
-    await page.goto('https://www.rainbowfern.com');
+    await page.goto('https://www.rainbowfern.com', { waitUntil: 'networkidle' });
     await page.getByRole('link', { name: 'Contact', exact: true}).click();
-    await page.waitForURL(/\/contact/);
-    await page.screenshot({ path: './screenshots/contact.png' });
+    await page.waitForURL(/\/contact/, { waitUntil: 'networkidle' });
+    await page.waitForSelector('.items-start img', { state: 'visible' });
+    
+    expect(await page.screenshot({ path: `${SCREENSHOT_PATH}/contact.png`, fullPage: true })).toMatchSnapshot();
 });
