@@ -8,7 +8,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "npx playwright test e2e-tests/",
+    "test:ui": "npx playwright test e2e-tests/ --ui"
   },
   "dependencies": {
     "next": "15.4.5",
