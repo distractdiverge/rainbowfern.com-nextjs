@@ -9,8 +9,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "npx playwright test e2e-tests/",
-    "test:ui": "npx playwright test e2e-tests/ --ui"
+    "test": "npx playwright test e2e-tests/ --config ./e2e-tests/playwright.config.ts",
+    "test:ui": "npx playwright test e2e-tests/ --ui --config ./e2e-tests/playwright.config.ts"
   },
   "dependencies": {
     "next": "15.4.5",

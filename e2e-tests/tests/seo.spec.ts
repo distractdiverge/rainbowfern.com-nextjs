@@ -2,12 +2,11 @@ import { expect, test } from '@playwright/test';
 import { seoPages } from './seo.config';
 
 const WAIT_UNTIL = 'networkidle' as const;
-const BASE_URL = 'https://www.rainbowfern.com';
 
 seoPages.forEach((pageConfig) => {
     test.describe(`${pageConfig.name} page`, () => {
         test.beforeEach(async ({ page }) => {
-            await page.goto(`${BASE_URL}${pageConfig.path}`, { waitUntil: WAIT_UNTIL });
+            await page.goto(pageConfig.path, { waitUntil: WAIT_UNTIL });
         });
 
         test('matches expected title and description metadata', async ({ page }) => {
