@@ -8,7 +8,8 @@ export default defineConfig({
     workers: process.env.CI ? 1 : undefined, // Opt out of parallelization on CI
     reporter: 'html',
     use: {
-        baseURL: 'https://www.rainbowfern.com', // temp for now; TODO: Remove once tests exist
+        // baseURL: 'https://www.rainbowfern.com', // temp for now; TODO: Remove once tests exist
+        baseURL: 'http://localhost:3000', // temp for now; TODO: Remove once tests exist
         trace: 'on-first-retry',
     },
     projects: [
@@ -32,9 +33,9 @@ export default defineConfig({
     ],
 
     /* Run your local dev server before starting the tests */
-    // webServer: {
-    //     command: 'npm run start',
-    //     url: 'http://localhost:3000',
-    //     reuseExistingServer: !process.env.CI,
-    // },
+    webServer: {
+         command: 'npm run dev',
+         url: 'http://localhost:3000',
+         reuseExistingServer: !process.env.CI,
+    },
 });

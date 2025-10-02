@@ -28,9 +28,9 @@ export const seoPages: PageSEOExpectations[] = [
     {
         name: 'Home',
         path: '/',
-        title: 'Alex Lapinski | Software & Automation Consultant',
+        title: 'Astrid (Alex) Lapinski | Software Architecture & Integration',
         description:
-            'Welcome to the portfolio of Alex Lapinski. Specializing in software development, test automation, and project mentorship with over 18 years of experience.',
+            'Remote software architect & consultant in Philadelphia Area. 15+ years in fintech/healthcare. Enterprise architecture, system integration, technical leadership.',
         headings: [
             { level: 1, name: 'Rainbowfern.com' },
             { level: 1, name: 'Rainbow Fern Consulting' },
@@ -51,9 +51,9 @@ export const seoPages: PageSEOExpectations[] = [
     {
         name: 'Projects',
         path: '/projects',
-        title: 'Projects | Alex Lapinski',
+        title: 'Projects | Astrid (Alex) Lapinski | Software Architecture',
         description:
-            'Explore a selection of recent projects by Alex Lapinski, including a portfolio website and an AI-powered offline research assistant. View details and links to the code.',
+            'Architecture and integration implementations with accessible code. Enterprise systems, fintech solutions, AI/ML prototypes. Real-world projects from 15+ years.',
         headings: [
             { level: 1, name: 'Rainbowfern.com' },
             { level: 1, name: 'Projects' },
@@ -65,9 +65,9 @@ export const seoPages: PageSEOExpectations[] = [
     {
         name: 'Experience',
         path: '/experience',
-        title: 'Experience | Alex Lapinski',
+        title: 'Career Experience | Astrid (Alex) Lapinski | Architect',
         description:
-            'Review the extensive professional experience of Alex Lapinski, from Principal Technical Staff at PayPal to Independent Contractor, showcasing a career in software engineering and architecture.',
+            '15+ years as Principal Architect and engineer in regulated fintech and healthcare. Led enterprise architecture, system integrations, cross-team coordination.',
         headings: [
             { level: 1, name: 'Rainbowfern.com' },
             { level: 1, name: 'Experience' },
@@ -84,9 +84,9 @@ export const seoPages: PageSEOExpectations[] = [
     {
         name: 'Education',
         path: '/education',
-        title: 'Education & Skills | Alex Lapinski',
+        title: 'Skills & Education | Astrid (Alex) Lapinski | Architect',
         description:
-            'Discover the educational background and extensive skill set of Alex Lapinski, including proficiency in C#, Python, React, and various development tools and techniques.',
+            'Technical expertise: Python, TypeScript, Java, .NET, AWS. Enterprise architecture, system integration, 15+ years experience. MS Software Engineering, Drexel.',
         headings: [
             { level: 1, name: 'Rainbowfern.com' },
             { level: 1, name: 'Education' },
@@ -98,9 +98,9 @@ export const seoPages: PageSEOExpectations[] = [
     {
         name: 'Contact',
         path: '/contact',
-        title: 'Contact | Alex Lapinski',
+        title: 'Hire Astrid (Alex) Lapinski | Architecture Consulting',
         description:
-            "Get in touch with Alex Lapinski to discuss potential projects, collaborations, or mentorship opportunities. Let's build something impactful together.",
+            'Available for architecture consulting, enterprise integration, and technical leadership projects. Remote services for Philadelphia Area and nationwide clients.',
         headings: [
             { level: 1, name: 'Rainbowfern.com' },
             { level: 1, name: 'Contact' },
