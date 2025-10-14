@@ -3,8 +3,8 @@ import ServicesHero from '@/components/ServicesHero';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Alex \'Astrid\' Lapinski | Software & Automation Consultant',
-  description: 'Welcome to the portfolio of Alex Lapinski. Specializing in software development, test automation, and project mentorship with over 18 years of experience.',
+  title: 'Astrid (Alex) Lapinski | Software Architecture & Integration',
+  description: 'Remote software architect & consultant in Philadelphia Area. 15+ years in fintech/healthcare. Enterprise architecture, system integration, technical leadership.',
 };
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
           <img className="float-left mr-5 mb-5 w-[37%] md:w-[40%] md:float-right md:ml-8 rounded-lg" 
           src={AboutHeroImage.src} alt="About Hero Image" />
           <p className="mb-5 text-sm">Hi! I&apos;m Astrid, I also go by Alex, and I&apos;m the founder of Rainbow Fern Consulting.</p>
-          <p className="mb-5 text-sm">I have worked in the software field for the last 18 years working up the corp ladder from intern to architect.</p>
+          <p className="mb-5 text-sm">I have worked in the software field for the last 15+ years working up the corp ladder from intern to architect.</p>
           <p className="mb-5 text-sm">Now, I am focusing on taking on remote projects, mentoring and helping develop amazing test automation suites.</p>
           <p className="pb-5 text-sm">Take a look below at some recent projects, or details on what I offer as services.</p>
           <p className="clear-left md:clear-right size-0">&nbsp;</p>
